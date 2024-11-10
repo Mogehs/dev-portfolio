@@ -7,6 +7,12 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const Hero = () => {
+  const handleClick = () => {
+    const link = document.createElement("a");
+    link.href = "/Mughees_UR Rehman_Resume.pdf";
+    link.download = "Mughees_Resume.pdf";
+    link.click();
+  };
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -35,14 +41,13 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi I&apos;m Mughees, A MERN Stack Developer
           </p>
-          <a href={"/#projects"}>
-            <MagicButton
-              title={"Show My Work"}
-              icon={<FaLocationArrow />}
-              position={"right"}
-              otherClasses={"gap-2"}
-            />
-          </a>
+          <MagicButton
+            title={"Download My Resume"}
+            icon={<FaLocationArrow />}
+            position={"right"}
+            otherClasses={"gap-2"}
+            handleClick={handleClick}
+          />
         </div>
       </div>
     </div>
