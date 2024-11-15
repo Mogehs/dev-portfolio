@@ -9,15 +9,23 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "../../lib/utils";
+import { viewport } from "three/webgpu";
 
 export function Button({
   borderRadius = "1.75rem",
   children,
-  as: Component = "button",
+  as: Component = motion.button,
   containerClassName,
   borderClassName,
   duration,
   className,
+  initial,
+  animate,
+  transition,
+  whileHover,
+  whileTap,
+  whileInView,
+  viewPort,
   ...otherProps
 }) {
   return (
@@ -29,6 +37,12 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
+      initial={initial}
+      animate={animate}
+      transition={transition}
+      whileHover={whileHover}
+      whileInView={whileInView}
+      viewport={viewport}
       {...otherProps}
     >
       <div

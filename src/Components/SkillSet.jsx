@@ -10,7 +10,7 @@ const SkillSet = () => {
         </h1>
 
         <motion.div
-          className="w-full mt-10 min-h-fit rounded-3xl p-10 flex flex-wrap gap-3 border-black-200 items-center justify-center"
+          className="w-fit mt-10 min-h-fit rounded-3xl p-6 flex flex-wrap gap-3 border-black-200 items-center justify-center"
           initial="hidden"
           animate="show"
           variants={{
@@ -25,7 +25,7 @@ const SkillSet = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
-              className="w-fit h-[3rem] py-2 px-4 rounded-xl cursor-pointer flex justify-center items-center gap-2 border border-slate-800 "
+              className="w-[10rem] md:w-fit h-[3rem] py-2 px-4 rounded-xl cursor-pointer flex justify-center items-center gap-2 border border-slate-800 text-nowrap  "
               initial={{
                 y: 10,
                 opacity: 0,

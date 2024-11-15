@@ -1,7 +1,7 @@
 import React from "react";
-
 import { workExperience } from "../data";
 import { Button } from "./ui/MovingBorder";
+import { delay, motion } from "framer-motion";
 
 const Experience = () => {
   return (
@@ -10,7 +10,19 @@ const Experience = () => {
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <motion.div
+        className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10"
+        initial="hidden"
+        animate="show"
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+      >
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -20,10 +32,32 @@ const Experience = () => {
               background: "rgb(4,7,29)",
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-
-              borderRadius: `calc(1.75rem* 0.96)`,
+              borderRadius: `calc(1.75rem * 0.96)`,
             }}
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            initial={
+              card.id % 2 == 0
+                ? {
+                    x: 10,
+                    opacity: 0,
+                  }
+                : {
+                    x: -10,
+                    opacity: 0,
+                  }
+            }
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: card.id * 0.2,
+            }}
+            viewport={{
+              once: false,
+              amount: 0.5,
+            }}
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
               <img
@@ -42,7 +76,7 @@ const Experience = () => {
             </div>
           </Button>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

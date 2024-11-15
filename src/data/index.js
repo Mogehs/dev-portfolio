@@ -181,14 +181,14 @@ export const workExperience = [
   {
     id: 2,
     title: "Web Development",
-    desc: "Designed and developed Web for all the type user interfaces platforms MERN Stack",
+    desc: "Designed and developed Web for all the type user interfaces platforms MERN stack.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance Web Dev Project",
-    desc: "Led the dev of a website for a client, from initial concept to deployment...",
+    desc: "Led the dev of a website for a client, from initial concept to deployment.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
