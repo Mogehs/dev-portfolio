@@ -6,6 +6,8 @@ import Hero from "./Components/Hero";
 import RecentProjects from "./Components/RecentProjects";
 import Grid from "./Components/Grid";
 import { navItems } from "./data";
+import SkillSet from "./Components/SkillSet";
+import Approach from "./Components/Approach";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <SkillSet />
         <RecentProjects />
-        <Clients />
+        {/* <Clients /> */}
         <Experience />
+        <Approach />
         <Footer />
       </div>
     </main>

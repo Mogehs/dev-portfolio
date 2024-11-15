@@ -2,10 +2,46 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "../data";
 import MagicButton from "./ui/MagicButton";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const [xClient, setXClient] = useState(0);
+  const [yClient, setYClient] = useState(0);
+  const [enter, setEnter] = useState(false);
+
+  useEffect(() => {
+    const changeMouse = (event) => {
+      setXClient(event.clientX);
+      setYClient(event.clientY);
+    };
+
+    window.addEventListener("mousemove", changeMouse);
+  }, [xClient, yClient]);
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-20 pb-10 relative" id="contact">
+      <motion.div
+        className="bg-purple h-[1.8rem] w-[1.8rem] rounded-full absolute md:inline hidden z-50 -top-10 -left-2 text-black-100 text-sm whitespace-nowrap font-semibold"
+        style={
+          enter && {
+            radius: "10px",
+            height: "3rem",
+            width: "17rem",
+            textAlign: "center",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "all 0.5s",
+          }
+        }
+        animate={{
+          x: xClient,
+          y: yClient,
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        {enter && "Yeah! Sure send me an email"}
+      </motion.div>
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
@@ -15,7 +51,15 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:mugheesurrehman06@gmail.com?subject=Let's%20get%20in%20touch&body=Hello%20Mughees,">
+        <a
+          href="mailto:mugheesurrehman06@gmail.com?subject=Let's%20get%20in%20touch&body=Hello%20Mughees,"
+          onMouseEnter={() => {
+            setEnter(true);
+          }}
+          onMouseLeave={() => {
+            setEnter(false);
+          }}
+        >
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}

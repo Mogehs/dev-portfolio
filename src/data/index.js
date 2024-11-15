@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -75,7 +75,7 @@ export const projects = [
     title: "Ochi Design",
     des: "An animated digital brand based project used to show the presentation services they provide reagrding to your business",
     img: "/p1-ochi.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/gsap.svg", "/fm.svg"],
     link: "https://ochi-react-ten.vercel.app/",
   },
   {
@@ -83,7 +83,7 @@ export const projects = [
     title: "Wanderlust",
     des: "A best site to showcase your property available for a rent or to find out a best location for your vacations",
     img: "/p2-wanderlust.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/js.svg", "/auth.svg"],
     link: "https://wanderlust-mern-1-ih1i.onrender.com/listings",
   },
   {
@@ -91,7 +91,7 @@ export const projects = [
     title: "Job Portal",
     des: "A complete full stack web just like the job portals with the admin dashboard to work like a recruiter and to search like a job seeker",
     img: "/p3-jobPortal.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/auth.svg"],
     link: "https://job-portal-0y94.onrender.com",
   },
   {
@@ -99,7 +99,7 @@ export const projects = [
     title: "Works Studio",
     des: "A sleek and minimal site to show case the beauty products just to show the products in a different style",
     img: "/p4-workStudio.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/js.svg", "/gsap.svg"],
     link: "https://works-studio-omega.vercel.app/",
   },
 ];
@@ -153,14 +153,14 @@ export const companies = [
   {
     id: 3,
     name: "ReactJs",
-    img: "/node.svg",
-    nameImg: "/nodeName.svg",
+    img: "/react.svg",
+    nameImg: "/reactName.svg",
   },
   {
     id: 4,
     name: "NodeJs",
-    img: "/react.svg",
-    nameImg: "/reactName.svg",
+    img: "/node.svg",
+    nameImg: "/nodeName.svg",
   },
   {
     id: 5,
@@ -188,7 +188,7 @@ export const workExperience = [
   {
     id: 3,
     title: "Freelance Web Dev Project",
-    desc: "Led the dev of a website for a client, from initial concept to deployment  .",
+    desc: "Led the dev of a website for a client, from initial concept to deployment...",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
@@ -215,7 +215,75 @@ export const socialMedia = [
   {
     id: 3,
     link: "https://www.linkedin.com/in/mughees-ur-rehman06/",
-
     img: "/link.svg",
+  },
+];
+
+export const skills = [
+  {
+    id: 1,
+    name: "HTML5",
+    img: "/html5.svg",
+  },
+  {
+    id: 2,
+    name: "TailwindCSS",
+    img: "/tail.svg",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    img: "/js.svg",
+  },
+  {
+    id: 4,
+    name: "React",
+    img: "/re.svg",
+  },
+
+  {
+    id: 5,
+    name: "Next.js",
+    img: "/next.svg",
+  },
+  {
+    id: 6,
+    name: "ShadCN UI",
+    img: "/shadui.svg",
+  },
+  {
+    id: 7,
+    name: "Framer Motion",
+    img: "/fm.svg",
+  },
+  {
+    id: 8,
+    name: "GSAP",
+    img: "/gsap.svg",
+  },
+  {
+    id: 9,
+    name: "Node.js",
+    img: "/node.svg",
+  },
+  {
+    id: 10,
+    name: "Express",
+    img: "/express.svg",
+  },
+  {
+    id: 11,
+    name: "MongoDB",
+    img: "/mongo.svg",
+  },
+  {
+    id: 12,
+    name: "PostgreSQL",
+    img: "/postsql.svg",
+  },
+  {
+    id: 13,
+    name: "PHP",
+    img: "/php.svg",
   },
 ];
