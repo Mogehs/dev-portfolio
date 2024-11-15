@@ -25,7 +25,8 @@ const SkillSet = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
-              className="w-[10rem] md:w-fit h-[3rem] py-2 px-4 rounded-xl cursor-pointer flex justify-center items-center gap-2 border border-slate-800 text-nowrap  "
+              className="w-[8rem] md:w-fit h-[3rem] py-2 px-1  md:px-4 rounded-xl cursor-pointer flex justify-center items-center gap-2 border border-slate-800 text-nowrap
+              text-[0.8rem] md:text-[1rem]"
               initial={{
                 y: 10,
                 opacity: 0,
