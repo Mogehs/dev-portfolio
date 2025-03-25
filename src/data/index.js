@@ -240,6 +240,11 @@ export const skills = [
     name: "React",
     img: "/re.svg",
   },
+  {
+    id: 14,
+    name: "Redux And Redux Toolkit",
+    img: "/redux.png",
+  },
 
   {
     id: 5,
