@@ -48,7 +48,14 @@ const SkillSet = () => {
               <div>
                 <img src={skill.img} alt={skill.name} />
               </div>
-              <p>{skill.name}</p>
+              <p
+                className={`${
+                  skill.name.includes("Redux") &&
+                  "max-sm:text-[0.7rem]  text-wrap text-center"
+                }`}
+              >
+                {skill.name}
+              </p>
             </motion.div>
           ))}
         </motion.div>
